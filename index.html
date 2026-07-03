@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#79c2f2">
+<title>Wobbly Wheels</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<!-- HUD -->
+<div id="hud">
+  <div id="timer">0.00</div>
+  <button id="btn-restart" class="hud-btn" aria-label="Restart">&#x21bb;</button>
+</div>
+
+<!-- Touch controls -->
+<div id="controls">
+  <div class="pad pad-left">
+    <button class="ctl" data-ctl="leanBack" aria-label="Lean back">&#x2939;</button>
+    <button class="ctl" data-ctl="leanFwd" aria-label="Lean forward">&#x2938;</button>
+  </div>
+  <div class="pad pad-right">
+    <button class="ctl ctl-small" data-ctl="eject" aria-label="Eject">EJECT</button>
+    <button class="ctl ctl-brake" data-ctl="brake" aria-label="Brake">&#x25BC;</button>
+    <button class="ctl ctl-gas" data-ctl="gas" aria-label="Accelerate">&#x25B2;</button>
+  </div>
+</div>
+
+<!-- Overlays -->
+<div id="overlay" class="overlay">
+  <div class="overlay-card">
+    <h1 id="overlay-title">WOBBLY WHEELS</h1>
+    <p id="overlay-sub">Ride to the finish line. Try not to die.</p>
+    <button id="overlay-btn" class="big-btn">PLAY</button>
+    <p class="hint">Right side: gas / brake &nbsp;&bull;&nbsp; Left side: lean<br>
+    Keyboard: &uarr;&darr; drive, &larr;&rarr; lean, Z eject, R restart</p>
+  </div>
+</div>
+
+<script src="vendor/planck.min.js"></script>
+<script src="js/input.js"></script>
+<script src="js/level.js"></script>
+<script src="js/player.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
